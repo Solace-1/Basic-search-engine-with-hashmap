@@ -1,0 +1,51 @@
+3.2 What you have to implement: Requirements and Specifications
+● Your program must print the documents in order of relevance after each search.
+
+● Your program must write the tf-idf scores to the file search_scores.txt as described
+earlier.
+
+#DONE# ● A hashing function hash_code that takes hashmap and a string w as input and converts it into
+a number (which is the bucket number to insert the word into). Observe that this is identical to
+the function hash that you built in Homework 6. A simple (and general) process is: Sum up the
+ASCII values of all the characters in the string to get a number S and then apply the hash
+function to get bucket b. For the hash function, you can choose the simple function b= S% N
+(i.e., S modulo N) function where N is the number of buckets in the hash table. You should
+explore if there are other, better, hash functions you can choose for this application, and if you
+choose a different hash function, you must then define that function in your documentation
+and why you chose that function. Note: Hash functions using a modulo N function typically use
+a prime number for N (the number of buckets). Why do you think this is the case ?
+
+#DONE# ● A function hash_table_insert (or hm_add) that inserts a string w and the associated document number
+i in the hash table (into bucket hash_code of string w). Take care to ensure that the
+frequency of the string in that document is updated if the string has appeared before in the
+document (i.e., if it has already been inserted into the table). This function will need to call
+some of the functions you need to implement linked lists.
+
+#DONE#● A function training for the “training” process, i.e., pre-processing, that takes a set of
+documents as input and returns the populated hash table as output.
+
+#DONE#● A function read_query to read the search query. 
+
+-REPLACE SOME CODE WITH THIS● A function rank in the search/retrieval process that computes the score for each document
+and ranks them based on the tf-idf ranking algorithm. Your system should also determine if
+there is no document with a match – i.e., if none of the words in the search query appear in
+any of the documents.
+
+==MAKE THIS WORK==● A function stop_word that is part of (last step of) the training process that identifies stop
+words and removes the stop words and adjusts the hash table and lists accordingly.
+
+#DONE-ALMOST. NEED TO ADD SCANNING TO FILE#● A main function that first calls the training process to read all the documents and create the
+hash table. Note that main must first prompt user for the size of the hash table, i.e., number of
+buckets. Once the training phase is over, it enters the search (retrieval) phase to search for
+the keywords and find the documents that contain these keywords. Main will then prompt the
+user for the query set (search phrase entered on one line) or prompt to exit: “Enter Search
+String or X to Exit”. If the user enters “X” main will exit the program, otherwise it calls the
+read_query function to read the query set. The program then computes the score, prints out
+the documents in order of relevance (i.e., descending order of scores), prints out the
+document tf-idf scores to search_scores.txt, and returns to the main prompt (i.e., to
+prompt for another search or to exit).
+
+#DONE# ● A makefile. Think carefully about how you want to construct the different modules and
+therefore how you set up the makefile. However you decide to construct your makefile, make
+sure that everything compiles correctly on shell by evoking make with no arguments. The
+resulting executable should be named “search.

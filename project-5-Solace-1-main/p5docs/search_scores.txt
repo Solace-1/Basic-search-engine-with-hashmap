@@ -1,0 +1,24 @@
+D1.txt	1.504077
+D2.txt	0.405465
+D1.txt	0.405465
+D2.txt	0.405465
+D1.txt	1.504077
+D2.txt	0.810930
+D2.txt	0.810930
+D1.txt	0.405465
+D1.txt	1.504077
+D2.txt	0.810930
+D1.txt	1.098612
+D1.txt	1.098612
+D1.txt	1.098612
+None of the search words were found in the documents :(
+D1.txt	1.504077
+D2.txt	0.810930
+D1.txt	1.504077
+D2.txt	0.810930
+D2.txt	0.810930
+D1.txt	0.405465
+D2.txt	0.810930
+D1.txt	0.405465
+D1.txt	1.504077
+D2.txt	0.810930

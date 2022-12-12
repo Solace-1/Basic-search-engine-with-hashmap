@@ -1,0 +1,2 @@
+computer architecture refers to the hardware and software
+architecture of a computer
